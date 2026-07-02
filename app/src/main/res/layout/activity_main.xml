@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Registro de Personas"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+            <TableRow android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="12dp"
+                    android:text="ID" />
+
+                <EditText
+                    android:id="@+id/txtid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ID"
+                    android:inputType="number" />
+            </TableRow>
+
+            <TableRow android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="12dp"
+                    android:text="Nombre" />
+
+                <EditText
+                    android:id="@+id/txtnombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="12dp"
+                    android:text="Apellido" />
+
+                <EditText
+                    android:id="@+id/txtapellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Apellido"
+                    android:inputType="textPersonName" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnguardar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="guardar"
+                android:text="Guardar" />
+
+            <Button
+                android:id="@+id/btnactualizar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="Actualizar"
+                android:text="Actualizar" />
+
+            <Button
+                android:id="@+id/btnbuscar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="Buscar"
+                android:text="Buscar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btneliminar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="Eliminar"
+                android:text="Eliminar" />
+
+            <Button
+                android:id="@+id/btnlistar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="Listar"
+                android:text="Listar" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
