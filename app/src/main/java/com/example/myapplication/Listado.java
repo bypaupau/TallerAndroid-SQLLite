@@ -18,7 +18,7 @@ import java.util.List;
 public class Listado extends AppCompatActivity {
 
     private TableLayout tblistado;
-    private String[] cabecera = {"Id", "Nombre", "apellido"};
+    private String[] cabecera = {"ID", "Nombre", "Apellido"};
     private DynamicTable creaTabla;
     private ArrayList<String[]> datos = new ArrayList<String[]>();
     FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(this);
@@ -49,7 +49,7 @@ public class Listado extends AppCompatActivity {
                 FeedReaderContract.FeedEntry.nameTable,
                 projection,
                 null,
-                null, null, null, null, sortOrder
+                null, null, null, sortOrder
         );
 
         while (cursor.moveToNext()){
@@ -62,6 +62,7 @@ public class Listado extends AppCompatActivity {
             fila[2] = apellido;
             datos.add(fila);
         }
+        cursor.close();
         db.close();
     }
 
